@@ -5,11 +5,9 @@ body{
     align-items: center;
     
 }
-#header{
-    position:fixed;
-    top:0;
-    margin:1rem;
-
+.h1 {
+  font-size: 1rem;
+  
 }
 .container{
   display: flex;
@@ -19,10 +17,11 @@ body{
 background-size: auto 100%;
 background-position: center;
   height: 80vh;  
-  border-radius: 40px;
+  border-radius: 30px;
   cursor: pointer;
   flex:0.5;
   position: relative;
+  margin-top:1rem;
 }
 .img-div.active{
   flex:5;
@@ -37,5 +36,51 @@ opacity: 0;
 }
 .img-div.active h1{
   opacity: 1;
-  transition: opacity 0.7s ease-in 0.4s;
+  transition: ease-in 0.4s;
+}
+h1{
+  color:red;
+}
+p{
+  font-size: 1.3rem;
+  position: absolute;
+  bottom: 1rem;
+  right:4rem;
+margin:1rem;
+}
+@keyframes web {
+  0% {
+    color: red;
+  }
+  25% {
+    color: red;
+  }
+  40% {
+    color: black;
+  }
+  50% {
+    color: aqua;
+  }
+  60% {
+    color: blue;
+  }
+  65% {
+    color: purple;
+  }
+  75% {
+    color: deepskyblue;
+  }
+  100% {
+    color: red;
+  }
+}
+
+.web {
+  color: red;
+  animation-name: web;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }

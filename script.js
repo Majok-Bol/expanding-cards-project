@@ -1,11 +1,11 @@
 const selectImages = document.querySelectorAll(".img-div");
 selectImages.forEach((image) => {
   image.addEventListener("click", () => {
-    removeActiveImage();
+    removeActiveClass();
     image.classList.add("active");
   });
 });
-function removeActiveImage() {
+function removeActiveClass() {
   selectImages.forEach((image) => {
     image.classList.remove("active");
   });
