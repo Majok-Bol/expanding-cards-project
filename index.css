@@ -1,86 +1,63 @@
-body{
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-}
-.h1 {
-  font-size: 1rem;
-  
-}
-.container{
+body {
+  margin: 0;
   display: flex;
-  width:90vw;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.img-div{
-background-size: auto 100%;
-background-position: center;
-  height: 80vh;  
+
+.title {
+  font-size: 1.5rem;
+  margin-top: 2rem;
+}
+
+.container {
+  display: flex;
+  width: 90vw;
+  margin-top: 2rem;
+}
+
+.img-div {
+  background-size: auto 100%;
+  background-position: center;
+  height: 80vh;
   border-radius: 30px;
   cursor: pointer;
-  flex:0.5;
+  flex: 0.5;
   position: relative;
-  margin-top:1rem;
+  transition: flex 0.5s ease;
 }
-.img-div.active{
-  flex:5;
+
+.img-div.active {
+  flex: 5;
 }
-.img-div h1{
-  font-size: 24px;
-  position:absolute;
-  bottom:20px;
-left:20px;
-margin:0;
-opacity: 0;
-}
-.img-div.active h1{
-  opacity: 1;
-  transition: ease-in 0.4s;
-}
-h1{
-  color:red;
-}
-p{
-  font-size: 1.3rem;
+
+.img-div h2 {
+  font-size: 1.5rem;
   position: absolute;
-  bottom: 1rem;
-  right:4rem;
-margin:1rem;
+  bottom: 20px;
+  left: 20px;
+  margin: 0;
+  opacity: 0;
+  transition: opacity 0.4s ease;
 }
-@keyframes web {
-  0% {
-    color: red;
-  }
-  25% {
-    color: red;
-  }
-  40% {
-    color: black;
-  }
-  50% {
-    color: aqua;
-  }
-  60% {
-    color: blue;
-  }
-  65% {
-    color: purple;
-  }
-  75% {
-    color: deepskyblue;
-  }
-  100% {
-    color: red;
-  }
+
+.img-div.active h2 {
+  opacity: 1;
 }
 
 .web {
   color: red;
-  animation-name: web;
-  animation-duration: 5s;
-  animation-timing-function: ease-in-out;
-  animation-delay: 2s;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
+  animation: webColor 5s ease-in-out 2s infinite alternate;
+}
+
+@keyframes webColor {
+  0% { color: red; }
+  25% { color: red; }
+  40% { color: black; }
+  50% { color: aqua; }
+  60% { color: blue; }
+  65% { color: purple; }
+  75% { color: deepskyblue; }
+  100% { color: red; }
 }
